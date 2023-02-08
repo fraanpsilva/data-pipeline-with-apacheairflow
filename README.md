@@ -25,18 +25,17 @@ Casos de uso comuns do Airflow
 
 Principais conceitos da ferramenta
 
-*DAG* 
-é um fluxo de trabalho, um pipeline de dados definido em python que trata-se de um </br>
-conjunto de instruções que precisam ser executadas em uma determinada ordem. Ao definirmos um data pipeline no Airflow, este passa a ser um DAG.
+*DAG* </br>
+é um fluxo de trabalho, um pipeline de dados definido em python que trata-se de um conjunto de instruções que precisam ser executadas em uma determinada ordem. Ao definirmos um data pipeline no Airflow, este passa a ser um DAG.
 
 
-*Task*
+*Task* </br>
 É a unidade mais básica de um DAG e é utilizada para implementar uma determinada lógica no pipeline. Podemos afirmar, portanto, que um DAG também é um conjunto de tasks onde cada uma dessas tarefas corresponde a uma etapa que precisa ser realizada no pipeline de dados.
 
-*DAG run*
+*DAG run* </br>
 ou "execução de DAG" , trata-se da execução propriamente dita de um DAG no tempo. Este DAG run inclui algumas informações sobre a execução do DAG, entra elas podemos citar o horário e tempo de execução de cada tarefa. Em suma, trata-se da instância de um DAG no tempo.
 
-*Task instance*
+*Task instance* </br>
 ou "instância de tarefa" , é a execução de uma tarefa em um ponto específico do DAG. Além disso, quando trabalhamos com DAGs, interagimos principalmente com *_operators_* (operadores), que são os blocos de construção de um DAG. Esses operators contêm a lógica de como os dados são processados em um data pipeline e cada tarefa é definida justamente pela instanciação de um operador.
  
 
