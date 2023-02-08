@@ -18,7 +18,7 @@ city = 'Boston'
 key = 'JK935MN73WSTV8B5H6KT6QNNW'
 
 # url da API
-URL = join('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/'
+URL = join('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/',
            f'{city}/{data_inicio}/{data_fim}?unitGroup=metric&include=days&key={key}&contentType=csv')
 
 # parametros adicionados na url
