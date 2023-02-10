@@ -1,0 +1,174 @@
+[2023-02-10 14:28:40,657] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dados_climaticos.extrai_dados scheduled__2022-12-26T00:00:00+00:00 [queued]>
+[2023-02-10 14:28:40,659] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dados_climaticos.extrai_dados scheduled__2022-12-26T00:00:00+00:00 [queued]>
+[2023-02-10 14:28:40,659] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-10 14:28:40,659] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-02-10 14:28:40,659] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-10 14:28:40,663] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): extrai_dados> on 2022-12-26 00:00:00+00:00
+[2023-02-10 14:28:40,664] {standard_task_runner.py:52} INFO - Started process 34555 to run task
+[2023-02-10 14:28:40,667] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'dados_climaticos', 'extrai_dados', 'scheduled__2022-12-26T00:00:00+00:00', '--job-id', '54', '--raw', '--subdir', 'DAGS_FOLDER/dados_climaticos.py', '--cfg-path', '/var/folders/b_/44w2czd50d77jsslrsmc4_sc0000gn/T/tmpqdvu03wu', '--error-file', '/var/folders/b_/44w2czd50d77jsslrsmc4_sc0000gn/T/tmpbhhd2ksj']
+[2023-02-10 14:28:40,668] {standard_task_runner.py:80} INFO - Job 54: Subtask extrai_dados
+[2023-02-10 14:28:40,685] {task_command.py:370} INFO - Running <TaskInstance: dados_climaticos.extrai_dados scheduled__2022-12-26T00:00:00+00:00 [running]> on host airdefrancilene.lan
+[2023-02-10 14:28:40,696] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1451, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1555, in _execute_task_with_callbacks
+    task_orig = self.render_templates(context=context)
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 2212, in render_templates
+    rendered_task = self.task.render_template_fields(context)
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 1185, in render_template_fields
+    self._do_render_template_fields(self, self.template_fields, context, jinja_env, set())
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/utils/session.py", line 71, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/models/abstractoperator.py", line 344, in _do_render_template_fields
+    rendered_content = self.render_template(
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/models/abstractoperator.py", line 404, in render_template
+    return {key: self.render_template(value, context, jinja_env) for key, value in value.items()}
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/models/abstractoperator.py", line 404, in <dictcomp>
+    return {key: self.render_template(value, context, jinja_env) for key, value in value.items()}
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/models/abstractoperator.py", line 387, in render_template
+    template = jinja_env.from_string(value)
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/jinja2/environment.py", line 941, in from_string
+    return cls.from_code(self, self.compile(source), globals, None)
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "<unknown>", line -1, in template
+jinja2.exceptions.TemplateSyntaxError: unexpected char '"' at 29
+[2023-02-10 14:28:40,701] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=dados_climaticos, task_id=extrai_dados, execution_date=20221226T000000, start_date=20230210T142840, end_date=20230210T142840
+[2023-02-10 14:28:40,703] {standard_task_runner.py:92} ERROR - Failed to execute job 54 for task extrai_dados (unexpected char '"' at 29; 34555)
+[2023-02-10 14:28:40,729] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-02-10 14:28:40,737] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-02-10 14:54:31,024] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dados_climaticos.extrai_dados scheduled__2022-12-26T00:00:00+00:00 [queued]>
+[2023-02-10 14:54:31,027] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dados_climaticos.extrai_dados scheduled__2022-12-26T00:00:00+00:00 [queued]>
+[2023-02-10 14:54:31,027] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-10 14:54:31,027] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-02-10 14:54:31,027] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-10 14:54:31,031] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): extrai_dados> on 2022-12-26 00:00:00+00:00
+[2023-02-10 14:54:31,033] {standard_task_runner.py:52} INFO - Started process 38166 to run task
+[2023-02-10 14:54:31,035] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'dados_climaticos', 'extrai_dados', 'scheduled__2022-12-26T00:00:00+00:00', '--job-id', '64', '--raw', '--subdir', 'DAGS_FOLDER/dados_climaticos.py', '--cfg-path', '/var/folders/b_/44w2czd50d77jsslrsmc4_sc0000gn/T/tmpstdq0agl', '--error-file', '/var/folders/b_/44w2czd50d77jsslrsmc4_sc0000gn/T/tmpaxpjr9_8']
+[2023-02-10 14:54:31,036] {standard_task_runner.py:80} INFO - Job 64: Subtask extrai_dados
+[2023-02-10 14:54:31,069] {task_command.py:370} INFO - Running <TaskInstance: dados_climaticos.extrai_dados scheduled__2022-12-26T00:00:00+00:00 [running]> on host airdefrancilene.lan
+[2023-02-10 14:54:31,097] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1451, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1555, in _execute_task_with_callbacks
+    task_orig = self.render_templates(context=context)
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 2212, in render_templates
+    rendered_task = self.task.render_template_fields(context)
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 1185, in render_template_fields
+    self._do_render_template_fields(self, self.template_fields, context, jinja_env, set())
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/utils/session.py", line 71, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/models/abstractoperator.py", line 344, in _do_render_template_fields
+    rendered_content = self.render_template(
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/models/abstractoperator.py", line 404, in render_template
+    return {key: self.render_template(value, context, jinja_env) for key, value in value.items()}
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/models/abstractoperator.py", line 404, in <dictcomp>
+    return {key: self.render_template(value, context, jinja_env) for key, value in value.items()}
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/models/abstractoperator.py", line 387, in render_template
+    template = jinja_env.from_string(value)
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/jinja2/environment.py", line 941, in from_string
+    return cls.from_code(self, self.compile(source), globals, None)
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "<unknown>", line -1, in template
+jinja2.exceptions.TemplateSyntaxError: unexpected char '"' at 29
+[2023-02-10 14:54:31,103] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=dados_climaticos, task_id=extrai_dados, execution_date=20221226T000000, start_date=20230210T145431, end_date=20230210T145431
+[2023-02-10 14:54:31,106] {standard_task_runner.py:92} ERROR - Failed to execute job 64 for task extrai_dados (unexpected char '"' at 29; 38166)
+[2023-02-10 14:54:31,138] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-02-10 14:54:31,149] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-02-10 14:58:46,484] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dados_climaticos.extrai_dados scheduled__2022-12-26T00:00:00+00:00 [queued]>
+[2023-02-10 14:58:46,487] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dados_climaticos.extrai_dados scheduled__2022-12-26T00:00:00+00:00 [queued]>
+[2023-02-10 14:58:46,487] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-10 14:58:46,487] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-02-10 14:58:46,487] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-10 14:58:46,491] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): extrai_dados> on 2022-12-26 00:00:00+00:00
+[2023-02-10 14:58:46,493] {standard_task_runner.py:52} INFO - Started process 38868 to run task
+[2023-02-10 14:58:46,496] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'dados_climaticos', 'extrai_dados', 'scheduled__2022-12-26T00:00:00+00:00', '--job-id', '66', '--raw', '--subdir', 'DAGS_FOLDER/dados_climaticos.py', '--cfg-path', '/var/folders/b_/44w2czd50d77jsslrsmc4_sc0000gn/T/tmpp82wuigb', '--error-file', '/var/folders/b_/44w2czd50d77jsslrsmc4_sc0000gn/T/tmp2f4md_up']
+[2023-02-10 14:58:46,497] {standard_task_runner.py:80} INFO - Job 66: Subtask extrai_dados
+[2023-02-10 14:58:46,513] {task_command.py:370} INFO - Running <TaskInstance: dados_climaticos.extrai_dados scheduled__2022-12-26T00:00:00+00:00 [running]> on host airdefrancilene.lan
+[2023-02-10 14:58:46,531] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=dados_climaticos
+AIRFLOW_CTX_TASK_ID=extrai_dados
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-26T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-26T00:00:00+00:00
+[2023-02-10 14:58:46,532] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/dados_climaticos.py", line 33, in extrai_dados
+    f'{city}/{data_interval_end}/{ds_add(data_interval_end, 7)}?unitGroup=metric&include=days&key={key}&contentType=csv')
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/macros/__init__.py", line 44, in ds_add
+    dt = datetime.strptime(str(ds), "%Y-%m-%d") + timedelta(days=days)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.9/Frameworks/Python.framework/Versions/3.10/lib/python3.10/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.9/Frameworks/Python.framework/Versions/3.10/lib/python3.10/_strptime.py", line 352, in _strptime
+    raise ValueError("unconverted data remains: %s" %
+ValueError: unconverted data remains: T00:00:00+00:00
+[2023-02-10 14:58:46,535] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=dados_climaticos, task_id=extrai_dados, execution_date=20221226T000000, start_date=20230210T145846, end_date=20230210T145846
+[2023-02-10 14:58:46,538] {standard_task_runner.py:92} ERROR - Failed to execute job 66 for task extrai_dados (unconverted data remains: T00:00:00+00:00; 38868)
+[2023-02-10 14:58:46,555] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-02-10 14:58:46,562] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-02-10 17:29:18,601] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dados_climaticos.extrai_dados scheduled__2022-12-26T00:00:00+00:00 [queued]>
+[2023-02-10 17:29:18,603] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dados_climaticos.extrai_dados scheduled__2022-12-26T00:00:00+00:00 [queued]>
+[2023-02-10 17:29:18,603] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-10 17:29:18,603] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-02-10 17:29:18,603] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-10 17:29:18,607] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): extrai_dados> on 2022-12-26 00:00:00+00:00
+[2023-02-10 17:29:18,610] {standard_task_runner.py:52} INFO - Started process 55339 to run task
+[2023-02-10 17:29:18,612] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'dados_climaticos', 'extrai_dados', 'scheduled__2022-12-26T00:00:00+00:00', '--job-id', '104', '--raw', '--subdir', 'DAGS_FOLDER/dados_climaticos.py', '--cfg-path', '/var/folders/b_/44w2czd50d77jsslrsmc4_sc0000gn/T/tmp5ak05m62', '--error-file', '/var/folders/b_/44w2czd50d77jsslrsmc4_sc0000gn/T/tmp73o4y9qz']
+[2023-02-10 17:29:18,613] {standard_task_runner.py:80} INFO - Job 104: Subtask extrai_dados
+[2023-02-10 17:29:18,630] {task_command.py:370} INFO - Running <TaskInstance: dados_climaticos.extrai_dados scheduled__2022-12-26T00:00:00+00:00 [running]> on host airdefrancilene.lan
+[2023-02-10 17:29:18,647] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=dados_climaticos
+AIRFLOW_CTX_TASK_ID=extrai_dados
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-26T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-26T00:00:00+00:00
+[2023-02-10 17:29:18,762] {local_task_job.py:156} INFO - Task exited with return code Negsignal.SIGSEGV
+[2023-02-10 17:29:18,767] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=dados_climaticos, task_id=extrai_dados, execution_date=20221226T000000, start_date=20230210T172918, end_date=20230210T172918
+[2023-02-10 17:29:18,774] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-02-10 17:33:19,318] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dados_climaticos.extrai_dados scheduled__2022-12-26T00:00:00+00:00 [queued]>
+[2023-02-10 17:33:19,320] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dados_climaticos.extrai_dados scheduled__2022-12-26T00:00:00+00:00 [queued]>
+[2023-02-10 17:33:19,320] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-10 17:33:19,320] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-02-10 17:33:19,320] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-10 17:33:19,324] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): extrai_dados> on 2022-12-26 00:00:00+00:00
+[2023-02-10 17:33:19,326] {standard_task_runner.py:52} INFO - Started process 55911 to run task
+[2023-02-10 17:33:19,329] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'dados_climaticos', 'extrai_dados', 'scheduled__2022-12-26T00:00:00+00:00', '--job-id', '120', '--raw', '--subdir', 'DAGS_FOLDER/dados_climaticos.py', '--cfg-path', '/var/folders/b_/44w2czd50d77jsslrsmc4_sc0000gn/T/tmpmh2wy3zm', '--error-file', '/var/folders/b_/44w2czd50d77jsslrsmc4_sc0000gn/T/tmpkuy9us7f']
+[2023-02-10 17:33:19,329] {standard_task_runner.py:80} INFO - Job 120: Subtask extrai_dados
+[2023-02-10 17:33:19,352] {task_command.py:370} INFO - Running <TaskInstance: dados_climaticos.extrai_dados scheduled__2022-12-26T00:00:00+00:00 [running]> on host airdefrancilene.lan
+[2023-02-10 17:33:19,369] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=dados_climaticos
+AIRFLOW_CTX_TASK_ID=extrai_dados
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-26T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-26T00:00:00+00:00
+[2023-02-10 17:33:19,478] {local_task_job.py:156} INFO - Task exited with return code Negsignal.SIGSEGV
+[2023-02-10 17:33:19,483] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=dados_climaticos, task_id=extrai_dados, execution_date=20221226T000000, start_date=20230210T173319, end_date=20230210T173319
+[2023-02-10 17:33:19,489] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

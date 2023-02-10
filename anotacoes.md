@@ -88,7 +88,7 @@ Um dos recursos mais fundamentais do Apache Airflow é a capacidade de agendar t
 
 É importante ressaltar que o DAG só é acionado após a data de início + o intervalo de agendamento, ou seja, no final do intervalo de dados. Por exemplo: se temos um DAG com a data de início igual a 13/09 e com o schedule interval igual a "@daily", indicando que ele deve ser executado todos os dias à meia noite, sua dinâmica de execução vai ser a seguinte:
 
-![Scheduler](/img/dag-run-
+![Scheduler](/img/dag-run-img.png)
 
 Para mais informações:
 [Scheduler](https://airflow.apache.org/docs/apache-airflow/2.2.3/concepts/scheduler.html)
@@ -100,7 +100,25 @@ Para mais informações:
 
 [Sobre variáveis dinâmicas](https://airflow.apache.org/docs/apache-airflow/2.3.2/templates-ref.html)
 
+##### CRON Expressions
 
+Quando queremos definir intervalos de tempo um pouco mais complexos para a execução do nosso DAG, o Airflow permite a utilização das chamadas Cron Expressions. A sintaxe delas consiste em 5 componentes:
+
+![Cron Expression](/img/cron-expressions.png)
+
+Sendo os valores possíveis para cada um desses componentes:
+
+* minuto: 0-59;
+* hora: 0-23;
+* dia do mês: 1-31;
+* mês: 1-12;
+* dia da semana: 0-6 representando de domingo a sábado.
+
+Se queremos que um DAG seja executado toda segunda-feira do mês, às 00h00. Por isso, passamos a seguinte Cron Expression para o parâmetro schedule_interval:
+<code>schedule_interval = 0 0 * * 1</code>
+
+Para saber mais:
+[CRON Expression](https://en.wikipedia.org/wiki/Cron#CRON_expression)
 
 
 
