@@ -120,7 +120,8 @@ Se queremos que um DAG seja executado toda segunda-feira do mês, às 00h00. Por
 Para saber mais:
 [CRON Expression](https://en.wikipedia.org/wiki/Cron#CRON_expression)
 
-
+Para saber sobre:
+[Passando informações entre tarefas](https://airflow.apache.org/docs/apache-airflow/2.3.2/concepts/xcoms.html#custom-xcom-backends)
 
 
 
