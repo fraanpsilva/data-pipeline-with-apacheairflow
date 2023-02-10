@@ -7,8 +7,8 @@ from airflow.utils.dates import days_ago
 
 with DAG(
     'meu_primeiro_dag', #dag id
-    start_date=days_ago(1), #data que o dag começará a ser executado
-    schedule_inerval='@daily' #intervalo de agendamento do DAG
+    start_date=days_ago(2), #data que o dag começará a ser executado
+    schedule_interval='@daily' #intervalo de agendamento do DAG
 ) as dag:
 
     # definindo as tasks(tarefas)
@@ -17,7 +17,7 @@ with DAG(
     tarefa_3 = EmptyOperator(task_id = 'tarefa_3')
     tarefa_4 = BashOperator(
         task_id = 'cria_pasta',
-        bash_command = 'mkdir -p  "/airflow-alura/pasta" '
+        bash_command = 'mkdir -p  "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/pasta={{data_interval_end}}" '
     )
 
     # definindo o fluxo de execução das tarefas
