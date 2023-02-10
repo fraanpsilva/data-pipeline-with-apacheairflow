@@ -1,4 +1,4 @@
-PIPELINE DE DADOS 
+### PIPELINE DE DADOS 
 
 um pipeline de dados, ou datapipeline, é uma série de etapas de processamento de dados.
 Sendo que, cada etapa fornece uma saída que é a entrada para a próxima etapa. Isso vai acontecendo
@@ -12,11 +12,11 @@ os pipelines podem ficar bem complexos e com diferentes etapas dependendo do pro
 feito.
 
 Para se aprofundar mais nesse assunto:
-[What is a data pipeline](https://hazelcast.com/glossary/data-pipeline/) - Hazelcast
-[What is a data pipeline](https://www.ibm.com/topics/data-pipeline) - IBM
+* [What is a data pipeline](https://hazelcast.com/glossary/data-pipeline/) - Hazelcast
+* [What is a data pipeline](https://www.ibm.com/topics/data-pipeline) - IBM
 
 
--- principais passos do ambiente
+#### principais passos do ambiente
 1. verificar a versão do python (instalar a venv)
 2. criar ambientevirtual e ativá-lo
 3. instalar airflow (pip3 install 'apache-airflow==2.3.2' --constraint "https://raw/githubusercontent.com/apache/airflow/constraints-2.3.2/constraints-3.9.txt"(versao)(arquivo de restrição))
@@ -40,7 +40,7 @@ Interface que lista os DAGs
 **Recent Tasks :** monstram as tarefas do DAG
 
 Para saber mais sobre:
-[Outras visualizações da interface](https://airflow.apache.org/docs/apache-airflow/2.3.2/ui.html)
+* [Outras visualizações da interface](https://airflow.apache.org/docs/apache-airflow/2.3.2/ui.html)
 
 DAG - Directed Acyclic Graphs (Grafos Acíclicos Dirigidos) <br>
 *Directed -* quer dizer que o fluxo de trabalho sempre vai se dar apenas em uma única direção. <br>
@@ -48,8 +48,8 @@ DAG - Directed Acyclic Graphs (Grafos Acíclicos Dirigidos) <br>
 *Graphs -* ferramneta matemática com nós e arestas que conectam esses nós (que são as nossas tarefas)
 
 para saber mais:
-[airflow - entendendo os DAGs](https://www.alura.com.br/artigos/airflow-entendendo-dags)
-[DAGs - documentação](https://airflow.apache.org/docs/apache-airflow/1.10.12/concepts.html#dags)
+* [airflow - entendendo os DAGs](https://www.alura.com.br/artigos/airflow-entendendo-dags)
+* [DAGs - documentação](https://airflow.apache.org/docs/apache-airflow/1.10.12/concepts.html#dags)
 
 principal ideia do airflow é dividir uma tarfea grande em etapas.
 
@@ -73,7 +73,7 @@ Um operador possui 3 características principais:
 3. **Atomicidade:** a tarefa é um processo indivisível e bem determinado.
 
 Para mais informações sobre operators:
-[Sobre operators](https://airflow.apache.org/docs/apache-airflow/2.3.2/concepts/operators.html)
+* [Sobre operators](https://airflow.apache.org/docs/apache-airflow/2.3.2/concepts/operators.html)
 
 ##### Agendamento no Airflow
 Um dos recursos mais fundamentais do Apache Airflow é a capacidade de agendar trabalhos. Dessa forma, é importante conhecermos alguns termos do Airflow que são relacionados ao agendamento:
@@ -91,8 +91,8 @@ Um dos recursos mais fundamentais do Apache Airflow é a capacidade de agendar t
 ![Scheduler](/img/dag-run-img.png)
 
 Para mais informações:
-[Scheduler](https://airflow.apache.org/docs/apache-airflow/2.2.3/concepts/scheduler.html)
-[DAG Runs](https://airflow.apache.org/docs/apache-airflow/2.2.3/dag-run.html)
+* [Scheduler](https://airflow.apache.org/docs/apache-airflow/2.2.3/concepts/scheduler.html)
+* [DAG Runs](https://airflow.apache.org/docs/apache-airflow/2.2.3/dag-run.html)
 
 
 ##### Jinja Templates - Templates Reference
@@ -118,10 +118,10 @@ Se queremos que um DAG seja executado toda segunda-feira do mês, às 00h00. Por
 <code>schedule_interval = 0 0 * * 1</code>
 
 Para saber mais:
-[CRON Expression](https://en.wikipedia.org/wiki/Cron#CRON_expression)
+* [CRON Expression](https://en.wikipedia.org/wiki/Cron#CRON_expression)
 
 Para saber sobre:
-[Passando informações entre tarefas](https://airflow.apache.org/docs/apache-airflow/2.3.2/concepts/xcoms.html#custom-xcom-backends)
+* [Passando informações entre tarefas](https://airflow.apache.org/docs/apache-airflow/2.3.2/concepts/xcoms.html#custom-xcom-backends)
 
 
 
