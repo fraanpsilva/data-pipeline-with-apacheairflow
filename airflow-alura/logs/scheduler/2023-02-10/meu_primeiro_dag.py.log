@@ -1273,3 +1273,45 @@ Traceback (most recent call last):
 TypeError: DAG.__init__() got an unexpected keyword argument 'schedule_inerval'
 [2023-02-10 12:06:08,248] {processor.py:653} WARNING - No viable dags retrieved from /Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py
 [2023-02-10 12:06:08,262] {processor.py:161} INFO - Processing /Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py took 0.018 seconds
+[2023-02-10 12:06:48,721] {processor.py:153} INFO - Started process (PID=13422) to work on /Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py
+[2023-02-10 12:06:48,721] {processor.py:641} INFO - Processing file /Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py for tasks to queue
+[2023-02-10 12:06:48,721] {logging_mixin.py:115} INFO - [2023-02-10 12:06:48,721] {dagbag.py:507} INFO - Filling up the DagBag from /Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py
+[2023-02-10 12:06:48,723] {logging_mixin.py:115} INFO - [2023-02-10 12:06:48,722] {dagbag.py:320} ERROR - Failed to import: /Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py
+Traceback (most recent call last):
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py", line 8, in <module>
+    with DAG(
+TypeError: DAG.__init__() got an unexpected keyword argument 'schedule_inerval'
+[2023-02-10 12:06:48,723] {processor.py:653} WARNING - No viable dags retrieved from /Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py
+[2023-02-10 12:06:48,738] {processor.py:161} INFO - Processing /Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py took 0.018 seconds
+[2023-02-10 12:07:24,299] {processor.py:153} INFO - Started process (PID=13663) to work on /Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py
+[2023-02-10 12:07:24,299] {processor.py:641} INFO - Processing file /Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py for tasks to queue
+[2023-02-10 12:07:24,299] {logging_mixin.py:115} INFO - [2023-02-10 12:07:24,299] {dagbag.py:507} INFO - Filling up the DagBag from /Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py
+[2023-02-10 12:07:24,302] {logging_mixin.py:115} INFO - [2023-02-10 12:07:24,301] {dagbag.py:320} ERROR - Failed to import: /Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py
+Traceback (most recent call last):
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py", line 8, in <module>
+    with DAG(
+TypeError: DAG.__init__() got an unexpected keyword argument 'schedule_inerval'
+[2023-02-10 12:07:24,302] {processor.py:653} WARNING - No viable dags retrieved from /Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py
+[2023-02-10 12:07:24,317] {processor.py:161} INFO - Processing /Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py took 0.019 seconds
+[2023-02-10 12:07:58,243] {processor.py:153} INFO - Started process (PID=13854) to work on /Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py
+[2023-02-10 12:07:58,244] {processor.py:641} INFO - Processing file /Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py for tasks to queue
+[2023-02-10 12:07:58,244] {logging_mixin.py:115} INFO - [2023-02-10 12:07:58,244] {dagbag.py:507} INFO - Filling up the DagBag from /Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py
+[2023-02-10 12:07:58,245] {logging_mixin.py:115} INFO - [2023-02-10 12:07:58,245] {dagbag.py:320} ERROR - Failed to import: /Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py
+Traceback (most recent call last):
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/venv/lib/python3.10/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py", line 8, in <module>
+    with DAG(
+TypeError: DAG.__init__() got an unexpected keyword argument 'schedule_inerval'
+[2023-02-10 12:07:58,246] {processor.py:653} WARNING - No viable dags retrieved from /Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py
+[2023-02-10 12:07:58,259] {processor.py:161} INFO - Processing /Users/francilenesilva/Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura/dags/meu_primeiro_dag.py took 0.017 seconds
