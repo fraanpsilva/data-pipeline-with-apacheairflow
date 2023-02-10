@@ -1,5 +1,5 @@
 PIPELINE DE DADOS 
-Documents/data-engineer/apache-airflow/orquestrando-pipeline1/data-pipeline/airflow-alura
+
 um pipeline de dados, ou datapipeline, é uma série de etapas de processamento de dados.
 Sendo que, cada etapa fornece uma saída que é a entrada para a próxima etapa. Isso vai acontecendo
 até que o pipeline seja concluído. Além disso, também podem existir etapas independentes a serem 
@@ -17,10 +17,10 @@ Para se aprofundar mais nesse assunto:
 
 
 -- principais passos do ambiente
-1 - verificar a versão do python (instalar a venv)
-2 - criar ambientevirtual e ativá-lo
-4 - instalar airflow (pip3 install 'apache-airflow==2.3.2' --constraint "https://raw/githubusercontent.com/apache/airflow/constraints-2.3.2/constraints-3.9.txt"(versao)(arquivo de restrição))
-5 - colocar o airflow no pathexecutar: airflow standalone (esse comando inicia o bd, criar um usuário)
+1. verificar a versão do python (instalar a venv)
+2. criar ambientevirtual e ativá-lo
+3. instalar airflow (pip3 install 'apache-airflow==2.3.2' --constraint "https://raw/githubusercontent.com/apache/airflow/constraints-2.3.2/constraints-3.9.txt"(versao)(arquivo de restrição))
+4. colocar o airflow no pathexecutar: airflow standalone (esse comando inicia o bd, criar um usuário)
 
 
 ## Apache Airflow
